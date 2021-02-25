@@ -1,0 +1,47 @@
+
+ * R = Var Artificial    
+ * S = Var Holgura       
+ * X = Var Decision      
+
+	x1	x2	R1	S1	R2	S2	SOL	DIV	
+	
+Z	10.0	16.0	0	-1	0	-1	44.0	0	
+R1	8.0	8.0	1	-1	0	0	22.0	0	
+R2	2.0	8.0	0	0	1	-1	22.0	0	
+
+- Estado: 0
+- Numero Pivot: 8.0,VB entrante: x2,VB saliente: R2
+
+
+
+
+	x1		x2		R1		S1		R2		S2		SOL		DIV		
+	
+Z	6.0		0.0		0.0		-1.0		-2.0		1.0		88.0		0		
+R1	6.0		0.0		1.0		-1.0		-1.0		1.0		0.0		2.75		
+x2	0.25		1.0		0.0		0.0		0.12		-0.12		2.75		2.75		
+
+- Estado: 1
+- Numero Pivot: 0.25,VB entrante: x1,VB saliente: x2
+
+
+
+
+	x1		x2		R1		S1		R2		S2		SOL		DIV		
+	
+Z	0.0		-24.0		0.0		-1.0		-5.0		4.0		154.0		0		
+R1	0.0		-24.0		1.0		-1.0		-4.0		4.0		-66.0		0.0		
+x1	1.0		4.0		0.0		0.0		0.5		-0.5		11.0		11.0		
+
+- Estado: 2
+** Solucion NO acotada  debido a que en la columnaPivot:5 cada uno de los valores es negativo o 0 **
+->Respuesta Final: U = 154.0(R1: -66.0,x1: 11.0,x2: 0,S1: 0,R2: 0,S2: 0 )
+	x1	x2	S1	S2	SOL	DIV	
+	
+Z	0.0	-24.0	0.0	4.0	88.0	0	
+R1	0.0	-24.0	-1.0	4.0	-66.0	-16.5	
+x1	1.0	4.0	0.0	-0.5	11.0	-22.0	
+
+- Estado: 0
+** Solucion NO acotada  debido a que en la columnaPivot:3 cada uno de los valores es negativo o 0 **
+->Respuesta Final: U = 88.0(R1: -66.0,x1: 11.0,x2: 0,S1: 0,S2: 0 )
